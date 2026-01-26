@@ -1,0 +1,48 @@
+{
+  "name": "<your-package-name>",
+  "version": "1.0.0",
+  "description": "<your-package-description>",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs"
+  },
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "setup": "npm install && node scripts/setup.js",
+    "test": "jest",
+    "clean": "rimraf dist",
+    "format": "prettier --write ./src/",
+    "format:check": "prettier --check ./src/",
+    "build:types": "tsc",
+    "build:js": "node scripts/build.js",
+    "build": "npm run clean && npm run format && npm run build:types && npm run build:js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+<your-repo>.git"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "<your-name>",
+  "license": "MIT",
+  "bugs": {
+    "url": "<your-repo>/issues"
+  },
+  "homepage": "<your-repo>#readme",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.0.9",
+    "consola": "^3.4.2",
+    "cross-env": "^10.1.0",
+    "esbuild": "^0.27.2",
+    "jest": "^30.2.0",
+    "prettier": "^3.8.0",
+    "rimraf": "^6.1.2",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  }
+}
