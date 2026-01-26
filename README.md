@@ -1,9 +1,9 @@
-# <your-package-name>
+# dowa
 
-<your-package-description>
+冷笑を検知しますw
 
 ## Install
 
 ```bash
-npm install <your-package-name>
+npm install dowa
 ```

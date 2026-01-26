@@ -19,10 +19,39 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // cjs-source-ns:cjs-entry
 var cjs_entry_exports = {};
 __export(cjs_entry_exports, {
-  default: () => cjs_entry_default
+  contains: () => contains,
+  findAll: () => findAll,
+  regexRelaxed: () => regexRelaxed,
+  regexStrict: () => regexStrict
 });
 module.exports = __toCommonJS(cjs_entry_exports);
-function main() {
-  console.log("This is a template!");
+var regexStrict = /(?:うお|どわ)(?:ー)?(?:[wｗ]+|(?:(?:爆笑)|笑)+|[（(]笑[）)])|(?:爆笑)+|[wｗ]{2,}|笑{2,}|[（(]笑[）)]/gu;
+var relaxedOnly = /(?:うお|どわ)(?:ー)*|爆笑/gu;
+function mergeRegex(r1, r2) {
+  const flags = Array.from(new Set((r1.flags + r2.flags).split(""))).join("");
+  const src = `(?:${r1.source})|(?:${r2.source})`;
+  return new RegExp(src, flags);
 }
-var cjs_entry_default = main;
+var regexRelaxed = mergeRegex(regexStrict, relaxedOnly);
+function findAll(text, relaxed = false) {
+  if (typeof text !== "string") {
+    throw new TypeError('"text" must be a string.');
+  }
+  if (typeof relaxed !== "boolean") {
+    throw new TypeError('"relaxed" must be a boolean.');
+  }
+  const re = relaxed ? regexRelaxed : regexStrict;
+  re.lastIndex = 0;
+  const m = text.match(re);
+  return m && m.length ? m : null;
+}
+function contains(text, relaxed = false) {
+  return !!findAll(text, relaxed);
+}
+// Annotate the CommonJS export names for ESM import in node:
+0 && (module.exports = {
+  contains,
+  findAll,
+  regexRelaxed,
+  regexStrict
+});
