@@ -1,6 +1,6 @@
 {
   "name": "dowa",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "冷笑を検知しますw",
   "type": "module",
   "main": "dist/index.cjs",
@@ -25,7 +25,11 @@
     "url": "https://github.com/otoneko1102/dowa.git"
   },
   "keywords": [
-    "template"
+    "冷笑",
+    "jp",
+    "japanese",
+    "regex",
+    "regexp"
   ],
   "author": "otoneko.",
   "license": "MIT",
