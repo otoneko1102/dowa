@@ -1,6 +1,6 @@
 const regexStrict: RegExp =
-  /(?:う[おぉ]|ど[わゎ])(?:[ー～]*)?(?:[wｗ]+|(?:(?:爆笑)|笑)+|[（(]笑[）)])|(?:爆笑){2,}|(?:冷笑){2,}|[（(]笑[）)]/gu;
-const relaxedOnly: RegExp = /(?:う[おぉ]|ど[わゎ])(?:[ー～]*)*|爆笑|冷笑/gu;
+  /(?:う[おぉ]|ど[わゎ])([ー～]*)?(?:[wｗ]+|(?:(?:爆笑)|笑)+|[（(]笑[）)])|(?:爆笑){2,}|(?:冷笑){2,}|[（(]笑[）)]/gu;
+const relaxedOnly: RegExp = /(?:う[おぉ]|ど[わゎ])([ー～]*)*|爆笑|冷笑/gu;
 function mergeRegex(r1: RegExp, r2: RegExp): RegExp {
   const flags = Array.from(new Set((r1.flags + r2.flags).split(""))).join("");
   const src = `(?:${r1.source})|(?:${r2.source})`;
