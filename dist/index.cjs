@@ -25,7 +25,11 @@ __export(cjs_entry_exports, {
   regexStrict: () => regexStrict
 });
 module.exports = __toCommonJS(cjs_entry_exports);
+<<<<<<< HEAD
 var regexStrict = /(?:う[おぉ]|ど[わゎ])(?:[ー～])?(?:[wｗ]+|(?:(?:爆笑)|笑)+|[（(]笑[）)])|(?:爆笑){2,}|(?:冷笑){2,}|[（(]笑[）)]/gu;
+=======
+var regexStrict = /(?:う[おぉ]|ど[わゎ])(?:[ー～])?(?:[wｗ]+|(?:(?:爆笑)|笑)+|[（(]笑[）)])|(?:爆笑)+|(?:冷笑)+|[（(]笑[）)]/gu;
+>>>>>>> d82cb38ec5c6100cb92f6561b5c2dc51f0731cb4
 var relaxedOnly = /(?:う[おぉ]|ど[わゎ])(?:[ー～])*|爆笑|冷笑/gu;
 function mergeRegex(r1, r2) {
   const flags = Array.from(new Set((r1.flags + r2.flags).split(""))).join("");
