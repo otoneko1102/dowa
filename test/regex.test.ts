@@ -11,6 +11,13 @@ type Case = {
 
 // テストケース
 const cases: Case[] = [
+  // 絵文字: Strict に含めるもの
+  { content: "これは😅です", expected: true },
+  { content: "爆笑🤣爆笑", expected: true },
+  { content: "本当‼️?", expected: true },
+  // 絵文字: 💦 は Relaxed のみ
+  { content: "いや💦", expected: false },
+  { content: "いや💦", expected: true, relaxed: true },
   // 単一
   { content: "爆笑爆笑", expected: true },
   { content: "うおｗ", expected: true },
@@ -37,6 +44,8 @@ const cases: Case[] = [
   { content: "どわー(笑)", expected: true },
   { content: "どわー爆笑", expected: true },
   { content: "どわー爆笑爆笑", expected: true },
+  { content: "お、おうｗ", expected: true },
+  { content: "きちーｗ", expected: true },
   // 複数マッチ
   { content: "うおうおうおｗ、爆笑爆笑", expected: ["うおｗ", "爆笑爆笑"] },
   {
