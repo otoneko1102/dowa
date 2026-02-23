@@ -24,5 +24,5 @@ contains('どわー', true);
 
 ## API
 
-- `findAll(text: string, relaxed = false): string[] | null` — マッチした冷笑の配列を返す（見つからなければ `null`）。
+- `findAll(text: string, relaxed = false): string[] | null` — マッチした冷笑の配列を返すw（見つからなければ `null`）。
 - `contains(text: string, relaxed = false): boolean` — 冷笑が含まれるかを真偽値で返す。
