@@ -26,3 +26,9 @@ contains('どわー', true);
 
 - `findAll(text: string, relaxed = false): string[] | null` — マッチした冷笑の配列を返すw（見つからなければ `null`）。
 - `contains(text: string, relaxed = false): boolean` — 冷笑が含まれるかを真偽値で返すw。
+
+## Contributors
+
+<a href="https://github.com/otoneko1102/dowa/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=otoneko1102/dowa" />
+</a>
