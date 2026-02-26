@@ -24,10 +24,12 @@ contains('どわー', true);
 
 ## API
 
-- `findAll(text: string, relaxed = false): string[] | null` — マッチした冷笑の配列を返すw（見つからなければ `null`）。
-- `contains(text: string, relaxed = false): boolean` — 冷笑が含まれるかを真偽値で返すw。
+- `findAll(text: string, relaxed = false): string[] | null` — マッチした冷笑の配列を返すw（見つからなければ `null`）
+- `contains(text: string, relaxed = false): boolean` — 冷笑が含まれるかを真偽値で返すw
 
-## Contributors
+## 貢献について
+
+貢献方法については [./CONTRIBUTING.md](./CONTRIBUTING.md) を確認してください
 
 <a href="https://github.com/otoneko1102/dowa/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=otoneko1102/dowa" />
