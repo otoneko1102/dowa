@@ -35,6 +35,6 @@ contains('どわー', true);
 
 貢献方法については [./CONTRIBUTING.md](./CONTRIBUTING.md) を確認してください
 
-<a href="https://github.com/otoneko1102/dowa/graphs/contributors">
+<a href="https://github.com/otnc/dowa/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=otoneko1102/dowa" />
 </a>
